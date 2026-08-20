@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+	--bg: #f4f7fb;
+	--surface: #ffffff;
+	--text: #172033;
+	--muted: #64748b;
+	--primary: #4f46e5;
+	--primary-dark: #3730a3;
+	--border: #e2e8f0;
+	--radius: 16px;
+	--shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	min-height: 100vh;
+	padding: 32px 20px;
+	background: linear-gradient(135deg, #eef2ff, var(--bg) 45%, #ecfeff);
+	color: var(--text);
+	font-family: 'Inter', system-ui, sans-serif;
+	line-height: 1.6;
+}
+
+header,
+main,
+footer,
+section,
+article,
+form {
+	width: min(100%, 960px);
+	margin: 0 auto 24px;
+}
+
+header {
+	padding: 32px;
+	border-radius: var(--radius);
+	background: linear-gradient(135deg, var(--primary), #7c3aed);
+	color: #fff;
+	box-shadow: var(--shadow);
+}
+
+h1,
+h2,
+h3 {
+	margin-bottom: 12px;
+	line-height: 1.2;
+}
+
+h1 { font-size: clamp(2rem, 5vw, 3.5rem); }
+h2 { font-size: 1.6rem; }
+
+p { color: var(--muted); }
+header p { color: #e0e7ff; }
+
+main,
+section,
+article,
+form {
+	padding: 28px;
+	border: 1px solid rgba(226, 232, 240, 0.9);
+	border-radius: var(--radius);
+	background: rgba(255, 255, 255, 0.88);
+	box-shadow: var(--shadow);
+}
+
+ul,
+ol { padding-left: 22px; }
+
+a {
+	color: var(--primary);
+	font-weight: 600;
+	text-decoration: none;
+}
+
+a:hover { color: var(--primary-dark); text-decoration: underline; }
+
+button,
+input,
+textarea,
+select {
+	width: 100%;
+	margin-top: 8px;
+	padding: 12px 14px;
+	border: 1px solid var(--border);
+	border-radius: 10px;
+	font: inherit;
+}
+
+button {
+	width: auto;
+	border: 0;
+	background: var(--primary);
+	color: #fff;
+	cursor: pointer;
+	font-weight: 700;
+	transition: transform 0.2s, background 0.2s;
+}
+
+button:hover { background: var(--primary-dark); transform: translateY(-2px); }
+
+input:focus,
+textarea:focus,
+select:focus {
+	outline: 3px solid rgba(79, 70, 229, 0.18);
+	border-color: var(--primary);
+}
+
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+	border-radius: 12px;
+}
+
+footer {
+	color: var(--muted);
+	text-align: center;
+}
+
+@media (max-width: 600px) {
+	body { padding: 16px 12px; }
+	header,
+	main,
+	section,
+	article,
+	form { padding: 22px; }
+}
