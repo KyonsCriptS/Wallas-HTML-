@@ -1,0 +1,132 @@
+:root {
+	--background: #f4f1ea;
+	--surface: #fffdf8;
+	--text: #202b2c;
+	--muted: #687574;
+	--primary: #176b63;
+	--primary-dark: #0f4d48;
+	--border: #d9e1da;
+	--shadow: 0 16px 35px rgba(32, 43, 44, 0.08);
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	min-height: 100vh;
+	padding: 2.5rem 1.25rem;
+	color: var(--text);
+	background: linear-gradient(135deg, #edf4f0, var(--background) 55%, #e9efed);
+	font-family: "Trebuchet MS", Arial, sans-serif;
+	line-height: 1.6;
+}
+
+header,
+main,
+footer {
+	width: min(960px, 100%);
+	margin-inline: auto;
+}
+
+header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 1.5rem;
+	margin-bottom: 2.5rem;
+	padding: 1.25rem 1.5rem;
+	border: 1px solid var(--border);
+	border-radius: 1rem;
+	background: var(--surface);
+	box-shadow: var(--shadow);
+}
+
+h1,
+h2 {
+	font-family: Georgia, serif;
+}
+
+h1 {
+	margin: 0;
+	color: var(--primary-dark);
+	font-size: clamp(1.8rem, 5vw, 2.7rem);
+}
+
+h2 {
+	margin: 0 0 0.75rem;
+	color: var(--primary-dark);
+	font-size: 1.65rem;
+}
+
+nav {
+	display: grid;
+	grid-auto-flow: column;
+	gap: 1.25rem;
+}
+
+nav a {
+	color: var(--primary);
+	font-weight: 700;
+	text-decoration: none;
+}
+
+nav a:hover,
+nav a:focus-visible {
+	color: var(--primary-dark);
+	text-decoration: underline;
+}
+
+main {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 1.25rem;
+}
+
+section {
+	min-height: 190px;
+	padding: 1.5rem;
+	border: 1px solid var(--border);
+	border-radius: 1rem;
+	background: var(--surface);
+	box-shadow: var(--shadow);
+}
+
+p {
+	margin: 0;
+	color: var(--muted);
+}
+
+footer {
+	margin-top: 2rem;
+	padding-top: 1.25rem;
+	border-top: 1px solid var(--border);
+	text-align: center;
+}
+
+@media (max-width: 700px) {
+	header {
+	align-items: flex-start;
+	flex-direction: column;
+	}
+
+	main {
+		grid-template-columns: 1fr;
+	}
+}
+
+@media (max-width: 420px) {
+	body {
+		padding: 1.25rem 0.75rem;
+	}
+
+	header {
+		padding: 1rem;
+	}
+
+	nav {
+		grid-auto-flow: row;
+		gap: 0.35rem;
+	}
+}
