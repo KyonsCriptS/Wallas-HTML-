@@ -131,3 +131,22 @@ footer {
 	article,
 	form { padding: 22px; }
 }
+body {
+    position: relative;
+    isolation: isolate;
+    min-height: 100vh;
+    margin: 0;
+    overflow-x: hidden;
+    color: white;
+}
+
+/* Imagem de fundo desfocada */
+body::before {
+    content: "";
+    position: fixed;
+    inset: -20px;
+    z-index: -2;
+    background: url("assets/janja\ mule\ de\ lulivis.png") center / cover no-repeat;
+    filter: (12px);
+    transform: scale(1.05);
+}
